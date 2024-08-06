@@ -69,17 +69,36 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-  const navLinks = document.querySelectorAll('#navLinks li ')
+  const navLinks = document.querySelectorAll('#navLinks li')
 
+  // Function to remove the classes from all nav links
+  function removeActiveClasses() {
+    navLinks.forEach((link) =>
+      link.classList.remove('border-b-2', 'border-white')
+    )
+  }
+
+  // Add click event listener to each nav link
   navLinks.forEach((link) => {
-    link.addEventListener('click', function () {
-      navLinks.forEach((link) =>
-        link.classList.remove('border-b-2', 'border-white')
-      )
+    link.addEventListener('click', function (event) {
+      // Stop the event from propagating to the document
+      event.stopPropagation()
+
+      // Remove the classes from all nav links
+      removeActiveClasses()
+
+      // Add the classes to the clicked nav link
       this.classList.add('border-b-2', 'border-white')
     })
   })
+
+  // Add click event listener to the document
+  document.addEventListener('click', function () {
+    // Remove the classes from all nav links when clicking outside
+    removeActiveClasses()
+  })
 })
+
 
 
 
