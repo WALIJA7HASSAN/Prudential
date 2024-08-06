@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const navSm = document.querySelector('#navBarSm')
     const navMd = document.querySelector('#navBarMd')
     const navLogoMd = document.querySelector('#nav-logoMd')
-    const navLogoSm = document.querySelector('#nav-logoSm')
+    const navLogoSm = document.querySelector('#navImgSm')
     const stickyLogoSrc = './assets/mainLogoSticky.png' 
      navSm.style.transition = 'background-color 0.3s ease'
      navMd.style.transition = 'background-color 0.3s ease'
@@ -23,50 +23,55 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 })
 
-// JavaScript to toggle the menu
+ // JavaScript to toggle the menu
+document.addEventListener('DOMContentLoaded', function () {
+  const menuIcon = document.getElementById('menu-icon')
+  const menu = document.getElementById('menu')
+  const navContent = document.getElementById('navContent')
+  const navLogo = document.getElementById('nav-logoSm')
+  const navPhone = document.getElementById('nav-phone')
 
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('menu-icon').addEventListener('click', function () {
-        const menu = document.getElementById('menu');
-        const closeIcon = document.getElementById('close-icon');
-        const menuIcon = document.getElementById('menu-icon');
+  menuIcon.addEventListener('click', function () {
+    if (menu.classList.contains('-translate-y-[120%]')) {
+      // Open the menu
+      menu.classList.remove('-translate-y-[120%]')
+      menu.classList.add('translate-y-0')
+      navContent.classList.add('bg-[#A8A8AA]') // Add background color to navContent
+      navLogo.classList.add('hidden') // Hide logo
+      navPhone.classList.add('hidden') // Hide phone icon
+      menuIcon.classList.remove('bx-menu')
+      menuIcon.classList.add('bx-x')
+    } else {
+      // Close the menu
+      menu.classList.add('-translate-y-[120%]')
+      menu.classList.remove('translate-y-0')
+      navContent.classList.remove('bg-[#A8A8AA]') // Remove background color from navContent
+      navLogo.classList.remove('hidden') // Show logo
+      navPhone.classList.remove('hidden') // Show phone icon
+      menuIcon.classList.remove('bx-x')
+      menuIcon.classList.add('bx-menu')
+    }
+  })
 
-        if (menu.classList.contains('-translate-y-[120%]')) {
-            // Open the menu
-            menu.classList.remove('-translate-y-[120%]');
-            menu.classList.add('translate-y-0');
-            menuIcon.classList.add('hidden'); // Hide menu icon
-            closeIcon.classList.remove('hidden'); // Show close icon
-        }
-    });
-
-    document.getElementById('close-icon').addEventListener('click', function () {
-        const menu = document.getElementById('menu');
-        const closeIcon = document.getElementById('close-icon');
-        const menuIcon = document.getElementById('menu-icon');
-
+  // Close menu when any link is clicked
+  document.querySelectorAll('#menu a').forEach((link) => {
+    link.addEventListener('click', function () {
+      if (!menu.classList.contains('-translate-y-[120%]')) {
         // Close the menu
-        menu.classList.add('-translate-y-[120%]');
-        menu.classList.remove('translate-y-0');
-        closeIcon.classList.add('hidden'); // Hide close icon
-        menuIcon.classList.remove('hidden'); // Show menu icon
-    });
+        menu.classList.add('-translate-y-[120%]')
+        menu.classList.remove('translate-y-0')
+        navContent.classList.remove('bg-[#A8A8AA]') // Remove background color from navContent
+        navLogo.classList.remove('hidden') // Show logo
+        navPhone.classList.remove('hidden') // Show phone icon
+        menuIcon.classList.remove('bx-x')
+        menuIcon.classList.add('bx-menu')
+      }
+    })
+  })
+})
 
-    // Close menu when any link is clicked
-    document.querySelectorAll('#menu a').forEach(link => {
-        link.addEventListener('click', function() {
-            const menu = document.getElementById('menu');
-            const closeIcon = document.getElementById('close-icon');
-            const menuIcon = document.getElementById('menu-icon');
-            
-            // Close the menu
-            menu.classList.add('-translate-y-[120%]');
-            menu.classList.remove('translate-y-0');
-            closeIcon.classList.add('hidden'); // Hide close icon
-            menuIcon.classList.remove('hidden'); // Show menu icon
-        });
-    });
-});
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
   const navLinks = document.querySelectorAll('#navLinks li')

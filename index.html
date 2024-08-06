@@ -34,44 +34,57 @@
             </div>
     </div>
     </nav>
-
-    <nav id="navBarSm" class="md:hidden fixed top-0 bg-transparent   transition-all duration-200 z-50 w-full">
-    <div class="text-right text-[20px] p-3 flex items-center justify-between flex-wrap text-white">
-        <i id="menu-icon" class="bx bx-menu transition-all duration-200 cursor-pointer  text-4xl"></i>
-        <a href="#"><img id="nav-logoSm" src="./assets/mainLogo.png" class="h-[38px] w-[176px]" alt="logo"></a>
-        <a href="#contact" ><img src="./assets/navPhone.svg" class=" fill-white h-[40px] w-[40px]" alt="" ></a>
-    </div>
-    <div id="menu" class="fixed inset-0 flex flex-col justify-between overflow-hidden transition-transform duration-300 transform  bg-[#A8A8AA] -translate-y-[120%]  ">
-      <!--- -->
-          <ul  class=" flex flex-col items-center  gap-4 px-4 py-2 flex-grow  text-[18px] my-4 text-white">
-          <li class="self-start"><i id="close-icon" class="bx bx-x transition-all duration-200 cursor-pointer   text-4xl "></i></li>
-             <li class="w-fit group   relative group"><a href="#services">Services</a>
-                <span class="w-0 group-hover:w-full h-[2px] bg-white absolute bottom-0 left-0 mt-2 transition-all duration-200"></span>
-            </li>
-             <li class="w-fit group   relative group"><a href="#qualifications">Qualifications</a>
-                <span class="w-0 group-hover:w-full h-[2px] bg-white absolute bottom-0 left-0 mt-2 transition-all duration-200"></span>
-            </li>
-             <li class="w-fit group   relative group"><a href="#experience">Experience</a>
-                <span class="w-0 group-hover:w-full h-[2px] bg-white absolute bottom-0 left-0 mt-2 transition-all duration-200"></span>
-            </li>
-        </ul>
-        <div class="flex flex-col align-items-center items-center justify-around mb-10 text-[#216092] text-[15px] gap-2 text-center px-3">
-            <a href="#"><p class="text-[18px]">Contact</p></a>
-            <div class="flex flex-col align-items-center items-center gap-2">
-              <a href="https://www.google.com.au/maps/place/Suite+2%2F39+Russell+St,+Toowoomba+City+QLD+4350,+Australia/@-27.5588907,151.9531409,17z/data=!3m1!4b1!4m6!3m5!1s0x6b965c41e43e6825:0x4e2329a00aaf4193!8m2!3d-27.5588907!4d151.9531409!16s%2Fg%2F11rg603wsk?entry=ttu" target="_blank" ><img src="./assets/location.svg" class="h-[50px] w-[50px] " alt=""></a>
-              <a href="https://www.google.com.au/maps/place/Suite+2%2F39+Russell+St,+Toowoomba+City+QLD+4350,+Australia/@-27.5588907,151.9531409,17z/data=!3m1!4b1!4m6!3m5!1s0x6b965c41e43e6825:0x4e2329a00aaf4193!8m2!3d-27.5588907!4d151.9531409!16s%2Fg%2F11rg603wsk?entry=ttu" target="_blank"><p>Suite 2, 39 Russell Street, Toowoomba City QLD 4350</p></a>
-            </div>
-            <div class="flex flex-col align-items-center items-center gap-2">
-              <a href="mailto:peter@prudentialam.com.au" ><img src="./assets/mail.svg" class="h-[50px] w-[50px] " alt=""></a>
-              <a href="mailto:peter@prudentialam.com.au" ><p>peter@prudentialam.com.au</p></a>
-            </div>
-            <div class="flex flex-col align-items-center items-center gap-2">
-              <a href="tel:+0497 788 012" ><img src="./assets/phone.svg" class="h-[50px] w-[50px] " alt=""></a>
-              <a href="tel:+0497 788 012"><p>0497 788 012</p></a>
+    <nav id="navBarSm" class="md:hidden fixed top-0 bg-transparent transition-all duration-200 z-50 w-full">
+        <div id="navContent" class="text-right text-[20px] p-3 flex items-center justify-between flex-wrap text-white">
+            <i id="menu-icon" class="bx bx-menu transition-all duration-200 cursor-pointer text-4xl"></i>
+            <a href="#" id="nav-logoSm"><img id="navImgSm" src="./assets/mainLogo.png" class="h-[38px] w-[176px]" alt="logo"></a>
+            <a href="#contact" id="nav-phone"><img src="./assets/navPhone.svg" class="fill-white h-[40px] w-[40px]" alt=""></a>
+        </div>
+        <div id="menu" class="fixed top-[54px] bottom-0 left-0 right-0 flex flex-col justify-between overflow-hidden transition-transform duration-300 transform bg-[#A8A8AA] -translate-y-[120%]">
+            <ul class="flex flex-col items-center gap-4 px-4 py-2 flex-grow text-[18px] my-4 text-white">
+                <li class="w-fit group relative group">
+                    <a href="#services">Services</a>
+                    <span class="w-0 group-hover:w-full h-[2px] bg-white absolute bottom-0 left-0 mt-2 transition-all duration-200"></span>
+                </li>
+                <li class="w-fit group relative group">
+                    <a href="#qualifications">Qualifications</a>
+                    <span class="w-0 group-hover:w-full h-[2px] bg-white absolute bottom-0 left-0 mt-2 transition-all duration-200"></span>
+                </li>
+                <li class="w-fit group relative group">
+                    <a href="#experience">Experience</a>
+                    <span class="w-0 group-hover:w-full h-[2px] bg-white absolute bottom-0 left-0 mt-2 transition-all duration-200"></span>
+                </li>
+            </ul>
+            <div class="flex flex-col align-items-center items-center justify-around mb-10 text-[#216092] text-[15px] gap-2 text-center px-3">
+                <a href="#"><p class="text-[18px]">Contact</p></a>
+                <div class="flex flex-col align-items-center items-center gap-2">
+                    <a href="https://www.google.com.au/maps/place/Suite+2%2F39+Russell+St,+Toowoomba+City+QLD+4350,+Australia/@-27.5588907,151.9531409,17z/data=!3m1!4b1!4m6!3m5!1s0x6b965c41e43e6825:0x4e2329a00aaf4193!8m2!3d-27.5588907!4d151.9531409!16s%2Fg%2F11rg603wsk?entry=ttu" target="_blank">
+                        <img src="./assets/location.svg" class="h-[50px] w-[50px]" alt="">
+                    </a>
+                    <a href="https://www.google.com.au/maps/place/Suite+2%2F39+Russell+St,+Toowoomba+City+QLD+4350,+Australia/@-27.5588907,151.9531409,17z/data=!3m1!4b1!4m6!3m5!1s0x6b965c41e43e6825:0x4e2329a00aaf4193!8m2!3d-27.5588907!4d151.9531409!16s%2Fg%2F11rg603wsk?entry=ttu" target="_blank">
+                        <p>Suite 2, 39 Russell Street, Toowoomba City QLD 4350</p>
+                    </a>
+                </div>
+                <div class="flex flex-col align-items-center items-center gap-2">
+                    <a href="mailto:peter@prudentialam.com.au">
+                        <img src="./assets/mail.svg" class="h-[50px] w-[50px]" alt="">
+                    </a>
+                    <a href="mailto:peter@prudentialam.com.au">
+                        <p>peter@prudentialam.com.au</p>
+                    </a>
+                </div>
+                <div class="flex flex-col align-items-center items-center gap-2">
+                    <a href="tel:+0497 788 012">
+                        <img src="./assets/phone.svg" class="h-[50px] w-[50px]" alt="">
+                    </a>
+                    <a href="tel:+0497 788 012">
+                        <p>0497 788 012</p>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-</nav>
+    </nav>
+
     <div class=" bg-cover bg-center md:bg-none bg-no-repeat bg-[url('./assets/mainBg.jpg')] ">
       <div class="text-white text-[48px] md:text-[100px] font-bold   py-32 md:pt-52 md:max-w-[930px] mx-auto px-3  flex flex-col flex-wrap md:leading-[7.4rem]">
         <p class="text-left">TRUTH</p>
@@ -178,6 +191,9 @@
     <span id="backToTopBtn" class="bg-[#04040468]  px-1 border border-white inline-flex cursor-pointer fixed bottom-4 right-4 hidden">
   <a href="#"><img src="./assets/faq-icon.svg" class="w-4 rotate-180" alt="Back to top"></a>
 </span>
+
+
+
   <script src="./app.js"></script>
 </body>
 </html>
